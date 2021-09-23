@@ -1,6 +1,5 @@
 package com.inflater
 
-import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
@@ -13,4 +12,4 @@ class DisplayMessageActivity : AppCompatActivity() {
     findViewById<TextView>(R.id.textView).apply { text = intent.getStringExtra(EXTRA_MESSAGE) }
   }
 }
-}
+
