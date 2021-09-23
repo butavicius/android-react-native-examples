@@ -5,8 +5,7 @@ type InflaterProps = {
   style: ViewStyle;
 };
 
-export const InflaterViewManager = requireNativeComponent<InflaterProps>(
-'InflaterView'
-);
+export const InflaterViewManager =
+  requireNativeComponent<InflaterProps>('InflaterView');
 
 export default InflaterViewManager;

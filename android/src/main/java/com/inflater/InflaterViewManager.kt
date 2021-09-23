@@ -20,26 +20,20 @@ class InflaterViewManager : ViewGroupManager<ViewGroup>() {
   override fun createViewInstance(reactContext: ThemedReactContext): ViewGroup {
     val viewGroup =
       LayoutInflater.from(reactContext).inflate(R.layout.main_layout, null) as RelativeLayout
-    val antras = viewGroup.findViewById<TextView>(R.id.textView2)
 
-    val buton = viewGroup.findViewById<Button>(R.id.buton)
+    val someTextView = viewGroup.findViewById<TextView>(R.id.textView2)
+    val button = viewGroup.findViewById<Button>(R.id.buton)
 
-    buton.setOnClickListener { changeWord(antras) }
+    button.setOnClickListener { changeWord(someTextView) }
     return viewGroup;
-
-
   }
 
   fun changeWord(view: TextView): Unit {
-
-    view.text = "Pakeicew"
-
+    view.text = "I changed text"
   }
 
   @ReactProp(name = "color")
   fun setColor(view: ViewGroup, color: String) {
-//    view.setBackgroundColor(Color.parseColor(color))
-
-    Log.d("INFLATER", "Changin color")
+    //Do something with prop
   }
 }
