@@ -18,7 +18,7 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.ViewGroupManager
 import com.facebook.react.uimanager.annotations.ReactProp
 
-const val EXTRA_MESSAGE = "Pabandykim is naujo"
+const val EXTRA_MESSAGE = "com.inflater.EXTRA_MESSAGE"
 
 class InflaterViewManager : ViewGroupManager<ViewGroup>() {
   override fun getName() = "InflaterView"
@@ -38,7 +38,7 @@ class InflaterViewManager : ViewGroupManager<ViewGroup>() {
 
   fun changeWord(view: TextView): Unit {
     view.text = "I changed text"
-    val intent = Intent(context, DisplayMessageActivity::class.java).apply {
+    val intent = Intent(context, DisplayVideoActivity::class.java).apply {
       putExtra(EXTRA_MESSAGE, "Vat ir šitkaip va ir nahei")
     }
     startActivity(context, intent, null)
